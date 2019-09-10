@@ -13,6 +13,6 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-alpine as execImage
 # 複製build Image裡的/app/Publish的檔案到本地端
 COPY --from=build /app/Publish/. .
 # 設定container的環境變數
-ENV HOME_PAGE_NAME="Development"
+ENV HOME_PAGE_NAME="Hello Docker"
 # 背景執行dotnet core 應用程式
 ENTRYPOINT ["dotnet", "DockerDemo.dll"]
