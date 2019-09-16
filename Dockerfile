@@ -1,5 +1,5 @@
 # 下載dotnet core 3.0 sdk Image
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
 # 建立指定的工作目錄
 WORKDIR /app 
 # 將本機所有的檔案複製到所指定的工作目錄 (/app)
@@ -15,4 +15,4 @@ COPY --from=build /app/Publish/. .
 # 設定container的環境變數
 ENV HOME_PAGE_NAME="Hello Docker"
 # 背景執行dotnet core 應用程式
-ENTRYPOINT ["dotnet", "DockerDemo.dll"]
+ENTRYPOINT ["dotnet", "dockerdemo.dll"]
