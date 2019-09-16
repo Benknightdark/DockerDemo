@@ -15,4 +15,4 @@ COPY --from=build /app/Publish/. .
 # 設定container的環境變數
 ENV HOME_PAGE_NAME="Hello Docker"
 # 背景執行dotnet core 應用程式
-ENTRYPOINT ["dotnet", "dockerdemo.dll"]
+ENTRYPOINT ["dotnet", "DockerDemo.dll"]
