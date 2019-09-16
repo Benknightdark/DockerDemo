@@ -1,5 +1,5 @@
 # 下載dotnet core 3.0 sdk Image
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 # 建立指定的工作目錄
 WORKDIR /app 
 # 將本機所有的檔案複製到所指定的工作目錄 (/app)
