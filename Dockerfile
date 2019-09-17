@@ -17,4 +17,4 @@ ENV HOME_PAGE_NAME="Hello Docker"
 # 背景執行dotnet core 應用程式
 ENTRYPOINT ["dotnet", "DockerDemo.dll"]
 
-#所有流程跑完後，會將最後一個產生的Container封裝為Image，並將先前產生的Container通通刪除
+#所有流程跑完後，會將最後一個產生的Container封裝為Image
